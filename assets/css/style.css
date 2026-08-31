@@ -1,0 +1,472 @@
+/* Modern Luxury Restaurant Design System */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-dark-green: #570000;          /* Navbar & Header: Biru Navy Gelap */
+    --color-dark-green-hover: #cc6d69;    /* Hover Navy */
+    --color-light-green: #D97706;         /* Tombol Utama: Royal Blue */
+    --color-light-green-bg: #E0F2FE;      /* Background Card: Soft Blue */
+    --color-gold: #F59E0B;                /* Accent: Amber Gold */
+    --color-gold-hover: #D97706;          /* Hover Gold */
+    --color-white: #FFFFFF;
+    --color-bg: #fcf9f8;                  /* Background Utama Halaman */
+    --color-text-dark: #0F172A;
+    --color-text-muted: #64748B;
+    --box-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --box-shadow-hover: 0 15px 35px rgba(21, 30, 49, 0.15);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    --radius-rounded: 50rem;
+    --radius-card: 1.25rem;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+}
+
+/* Custom Palette Utility Classes */
+.bg-dark-green {
+    background-color: var(--color-dark-green) !important;
+}
+
+.bg-light-green {
+    background-color: var(--color-light-green) !important;
+}
+
+.bg-gold {
+    background-color: var(--color-gold) !important;
+}
+
+.text-dark-green {
+    color: var(--color-dark-green) !important;
+}
+
+.text-light-green {
+    color: var(--color-light-green) !important;
+}
+
+.text-gold {
+    color: var(--color-gold) !important;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border: none;
+    font-weight: 500;
+    padding: 0.6rem 1.6rem;
+    border-radius: var(--radius-rounded);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #6e9a56;
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(131, 177, 106, 0.4);
+}
+
+.btn-dark-custom {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border: none;
+    font-weight: 500;
+    padding: 0.6rem 1.6rem;
+    border-radius: var(--radius-rounded);
+    transition: all 0.3s ease;
+}
+
+.btn-dark-custom:hover {
+    background-color: var(--color-dark-green-hover);
+    color: var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(62, 71, 45, 0.3);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--color-dark-green);
+    color: var(--color-dark-green);
+    background: transparent;
+    font-weight: 500;
+    padding: 0.55rem 1.5rem;
+    border-radius: var(--radius-rounded);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+}
+
+.btn-gold-custom {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
+    font-weight: 600;
+    border: none;
+    padding: 0.6rem 1.6rem;
+    border-radius: var(--radius-rounded);
+    transition: all 0.3s ease;
+}
+
+.btn-gold-custom:hover {
+    background-color: var(--color-gold-hover);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* Navbar Sticky & Brand */
+.navbar-custom {
+    background-color: var(--color-dark-green);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin: 0 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--color-gold);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.cart-badge {
+    background-color: var(--color-gold);
+    color: var(--color-dark-green);
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    padding: 0.25em 0.55em;
+    margin-left: 0.3rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../images/bgukk.jpg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: var(--color-white);
+    padding: 6rem 0 7rem;
+    position: relative;
+    border-bottom: 5px solid var(--color-gold);
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+}
+
+.hero-badge {
+    background-color: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: var(--radius-rounded);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+/* Cards & Menu */
+.menu-card {
+    background: var(--color-white);
+    border: none;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-soft);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.menu-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.menu-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.menu-category-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--color-dark-green);
+    color: var(--color-gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-rounded);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.menu-price-tag {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark-green);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-dark-green);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Filter Pills */
+.filter-btn {
+    border: 2px solid var(--color-dark-green);
+    background: var(--color-white);
+    color: var(--color-dark-green);
+    font-weight: 500;
+    border-radius: var(--radius-rounded);
+    padding: 0.4rem 1.2rem;
+    margin: 0.2rem;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--color-dark-green);
+    color: var(--color-gold);
+    border-color: var(--color-dark-green);
+}
+
+/* Cart Table & Checkout Card */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.custom-table tbody tr {
+    background: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    border-radius: 0.75rem;
+}
+
+.custom-table td, .custom-table th {
+    padding: 1rem;
+    vertical-align: middle;
+    border: none;
+}
+
+.custom-table tbody tr td:first-child {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.custom-table tbody tr td:last-child {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.qty-control {
+    display: inline-flex;
+    align-items: center;
+    background-color: #F0F3EC;
+    border-radius: var(--radius-rounded);
+    padding: 2px;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.qty-btn:hover {
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+}
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+}
+
+/* QR Code & Confirmation Box */
+.qr-container {
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-gold);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: inline-block;
+    box-shadow: var(--box-shadow-soft);
+}
+
+.order-receipt {
+    background-color: var(--color-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--box-shadow-soft);
+    padding: 2rem;
+    position: relative;
+}
+
+.order-receipt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--color-dark-green), var(--color-light-green), var(--color-gold));
+    border-top-left-radius: var(--radius-card);
+    border-top-right-radius: var(--radius-card);
+}
+
+/* Admin Sidebar & Header */
+.admin-sidebar {
+    background-color: var(--color-dark-green);
+    min-height: 100vh;
+    color: var(--color-white);
+    padding-top: 1.5rem;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    color: var(--color-gold);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-card {
+    border: none;
+    border-radius: var(--radius-card);
+    box-shadow: var(--box-shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* Footer */
+.footer-custom {
+    background-color: var(--color-dark-green);
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 4px solid var(--color-gold);
+    padding: 4rem 0 1.5rem;
+    margin-top: auto;
+}
+
+.footer-custom h5 {
+    color: var(--color-gold);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-gold);
+}
+
+.login-bg {
+    background-image: url('../images/bgukk.jpg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
