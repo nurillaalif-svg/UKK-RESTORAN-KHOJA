@@ -94,7 +94,7 @@ if ($current_script !== 'login.php') {
                     <hr class="text-white-50 my-4">
 
                     <div class="p-3 bg-dark text-white-50 rounded-3 small">
-                        <h6 class="text-gold font-heading fw-bold mb-1">Resto Nusantara</h6>
+                        <h6 class="text-gold font-heading fw-bold mb-1">Khoja Restaurant</h6>
                         <p class="mb-0">Versi 1.0 &bull; System Panel</p>
                     </div>
                 </div>

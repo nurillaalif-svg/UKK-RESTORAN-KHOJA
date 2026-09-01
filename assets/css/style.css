@@ -1,5 +1,5 @@
 /* Modern Luxury Restaurant Design System */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --color-dark-green: #570000;          /* Navbar & Header: Biru Navy Gelap */
@@ -14,7 +14,7 @@
     --color-text-muted: #64748B;
     --box-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
     --box-shadow-hover: 0 15px 35px rgba(21, 30, 49, 0.15);
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Reem Kufi', sans-serif;
     --font-body: 'Poppins', sans-serif;
     --radius-rounded: 50rem;
     --radius-card: 1.25rem;
